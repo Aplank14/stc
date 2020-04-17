@@ -1,5 +1,6 @@
 import React from "react";
 import {Container, Row} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 
 fetch('http://192.168.1.71:8000')
 
@@ -53,6 +54,7 @@ export default class Business extends React.Component {
                             <div className="">Phone: <span>{this.state.business.Owner}</span></div>
                             <div>{this.state.business.Facebook && (<span>Facebook: <a href={this.state.business.Facebook}>{this.state.business.Facebook}</a></span>)}</div>
                             <div>{this.state.business.Website && (<span>Website: <a href={this.state.business.Website}>{this.state.business.Website}</a></span>)}</div>
+                            <div><Link to={("/City/"+this.state.business.City)}>Local Businesses</Link></div>
                             <br></br>
                         </div>
 
