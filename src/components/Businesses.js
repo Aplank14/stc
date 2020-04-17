@@ -1,41 +1,44 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-export default class Businesses extends React.Component {
-    state = {
-      loading: true,
-      businesses: null
-    };
+export default function Businesses() {
+    const [loading, setLoading] = useState(false);
+    const [businesses, setBusinesses] = useState([]);
 
-    async componentDidMount() {
+    async function fetchData() {
         const url = "http://localhost:8000/status";
         const response = await fetch(url);
         let data = await response.json();
-        this.setState({ businesses: data, loading: false });
+        setBusinesses(data);
+        setLoading(false);
     }
 
-    render() {
-        if (this.state.loading) {
-            return <div>loading...</div>;
-        }
+    useEffect(() => {
+        fetchData();
+    });
+  
+    if (loading) {
+        return <div>loading...</div>;
+    }
 
-        if (!this.state.businesses) {
-            return <div>didn't get any businesses</div>;
-        }
+    if (!businesses) {
+        return <div>didn't get any City Information</div>;
+    }
 
-        let pages = this.state.businesses.map(element => {
-            return (
-                <li key={element.idBusinesses}>
-                    <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
-                </li>
-            );
-        });
-
+    let pages = businesses.map(element => {
         return (
-            <div className="containerFull">
-                <h1 align="center">Businesses</h1>
-                <div>{pages}</div>
-            </div>
+            <li key={element.idBusinesses}>
+                <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
+            </li>
         );
-    }
-  }
+    });
+
+    return (
+        <div className="containerFull">
+            <h1 align="center">Businesses</h1>
+            <div>{pages}</div>
+        </div>
+    );
+
+}

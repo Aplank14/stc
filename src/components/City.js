@@ -25,7 +25,7 @@ export default function City() {
         return <div>loading...</div>;
     }
 
-    if (!city) {
+    if (!businesses) {
         return <div>didn't get any City Information</div>;
     }
 
