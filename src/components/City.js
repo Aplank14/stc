@@ -37,6 +37,7 @@ export default class City extends React.Component {
 
         return (
             <div className="containerFull">
+                <h1 align="center"><span>{this.state.city}</span></h1>
                 {CityResults}
                </div>
         );

@@ -32,8 +32,8 @@ export default class Businesses extends React.Component {
         });
 
         return (
-            <div>
-                <h1>Businesses</h1>
+            <div className="containerFull">
+                <h1 align="center">Businesses</h1>
                 <div>{pages}</div>
             </div>
         );
