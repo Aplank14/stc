@@ -43,8 +43,8 @@ function App() {
           <Nav.Link to="/">Home</Nav.Link>
           <Nav.Link to="/">About Us</Nav.Link>
           <NavDropdown title="Search" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/businesses">By Business</NavDropdown.Item>
-            <NavDropdown.Item href="/Cities">By City</NavDropdown.Item>
+            <NavDropdown.Item href="/business">By Business</NavDropdown.Item>
+            <NavDropdown.Item href="/city">By City</NavDropdown.Item>
         
         {/* Split Drop Down
          <NavDropdown.Divider />
@@ -64,9 +64,9 @@ function App() {
         </Navbar.Collapse>
         </Navbar>
 
-            <Route exact path="/businesses" component={Businesses} />
             <Route exact path="/" component={Home} />
-            <Route exact path="/Cities" component={Cities} />
+            <Route exact path="/business" component={Businesses} />
+            <Route exact path="/city" component={Cities} />
             <Route path="/business/:id" component={Business} />
             <Route path="/city/:city" component={City} />
 
