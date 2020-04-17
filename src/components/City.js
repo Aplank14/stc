@@ -1,45 +1,47 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+export default function City() {
+    const [loading, setLoading] = useState(false);
+    const [businesses, setBusinesses] = useState([]);
 
-export default class City extends React.Component {
-    state = {
-      loading: true,
-      city: null
-    };
+    let { city } = useParams();
 
-    async componentDidMount() {
-        const { match } = this.props
-        const { params: { city } } = match;
+    async function fetchData() {
         const url = "http://localhost:8000/status";
         const response = await fetch(url);
         let data = await response.json();
         data = data.filter(element => element.City === city)
-        this.setState({ city: data, loading: false });
+        setBusinesses(data);
+        setLoading(false);
     }
 
-    render() {
-        if (this.state.loading) {
-            return <div>loading...</div>;
-        }
+    useEffect(() => {
+        fetchData();
+    });
+  
+    if (loading) {
+        return <div>loading...</div>;
+    }
 
-        if (!this.state.city) {
-            return <div>didn't get any City Information</div>;
-        }
+    if (!city) {
+        return <div>didn't get any City Information</div>;
+    }
 
-        let CityResults = this.state.city.map(element => {
-            return (
-                <li key={element.idBusinesses}>
-                    <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
-                </li>
-            );
-        });
-
+    let CityResults = businesses.map(element => {
         return (
-            <div className="containerFull">
-                <h1 align="center"><span>{this.state.city}</span></h1>
-                {CityResults}
-               </div>
+            <li key={element.idBusinesses}>
+                <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
+            </li>
         );
-    }
-  }
+    });
+
+    return (
+        <div className="containerFull">
+            <h1 align="center"><span>{city}</span></h1>
+            {CityResults}
+           </div>
+    );
+
+}
