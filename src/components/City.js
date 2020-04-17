@@ -19,7 +19,7 @@ export default function City() {
 
     useEffect(() => {
         fetchData();
-    });
+    }, []);
   
     if (loading) {
         return <div>loading...</div>;

@@ -16,7 +16,7 @@ export default function Businesses() {
 
     useEffect(() => {
         fetchData();
-    });
+    }, []);
   
     if (loading) {
         return <div>loading...</div>;
