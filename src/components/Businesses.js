@@ -7,7 +7,7 @@ export default function Businesses() {
     const [businesses, setBusinesses] = useState([]);
 
     async function fetchData() {
-        const url = "http://localhost:8000/status";
+        const url = `http://${process.env.REACT_APP_API_URL}/status`;
         const response = await fetch(url);
         let data = await response.json();
         setBusinesses(data);

@@ -2,8 +2,6 @@ import React from "react";
 import {Container, Row} from 'react-bootstrap'
 import {Link} from 'react-router-dom';
 
-fetch('http://192.168.1.71:8000')
-
 export default class Business extends React.Component {
     state = {
       loading: true,
@@ -13,7 +11,7 @@ export default class Business extends React.Component {
     async componentDidMount() {
         const { match } = this.props
         let { params: { id } } = match;
-        const url = "http://localhost:8000/status";
+        const url = `http://${process.env.REACT_APP_API_URL}/status`;
         const response = await fetch(url);
         let data = await response.json();
         id = parseInt(id);
