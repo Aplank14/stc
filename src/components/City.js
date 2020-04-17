@@ -10,7 +10,7 @@ export default function City() {
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://${process.env.REACT_APP_API_URL}/city/${city}`
+      const url = `http://${process.env.REACT_APP_API_URL}/business`
       const response = await fetch(url)
       let data = await response.json()
       data = data.filter(element => element.City === city)
