@@ -8,18 +8,18 @@ export default function City() {
 
     let { city } = useParams();
 
-    async function fetchData() {
-        const url = `http://${process.env.REACT_APP_API_URL}/status`;
-        const response = await fetch(url);
-        let data = await response.json();
-        data = data.filter(element => element.City === city)
-        setBusinesses(data);
-        setLoading(false);
-    }
-
     useEffect(() => {
+        async function fetchData() {
+            const url = `http://${process.env.REACT_APP_API_URL}/city/${city}`;
+            const response = await fetch(url);
+            let data = await response.json();
+            data = data.filter(element => element.City === city)
+            setBusinesses(data);
+            setLoading(false);
+        }
+
         fetchData();
-    }, []);
+    }, [city]);
   
     if (loading) {
         return <div>loading...</div>;

@@ -8,7 +8,7 @@ export default class Cities extends React.Component {
     };
 
     async componentDidMount() {
-        const url = `http://${process.env.REACT_APP_API_URL}/cities`;
+        const url = `http://${process.env.REACT_APP_API_URL}/city`;
         const response = await fetch(url);
         let data = await response.json();
         this.setState({ cities: data, loading: false });

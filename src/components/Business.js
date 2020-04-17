@@ -11,7 +11,7 @@ export default class Business extends React.Component {
     async componentDidMount() {
         const { match } = this.props
         let { params: { id } } = match;
-        const url = `http://${process.env.REACT_APP_API_URL}/status`;
+        const url = `http://${process.env.REACT_APP_API_URL}/business`;
         const response = await fetch(url);
         let data = await response.json();
         id = parseInt(id);
