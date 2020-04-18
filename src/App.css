@@ -91,3 +91,26 @@
 
   border: #f1f1f1 1px solid;
 }
+
+
+
+
+
+
+
+.footerTitle {
+  color: #E6E6E6;
+  font-size: 24px;
+}
+.footerBody {
+  color: #FF6633;
+  font-size: 16px;
+}
+.footerCopyright {
+  color: #E6E6E6;
+  font-size: 14px;
+}
+
+.footerpadding {
+  padding: "30px",
+}
