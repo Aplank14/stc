@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 
 export default function Businesses() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [businesses, setBusinesses] = useState([])
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function Businesses() {
     return <div>didn't get any City Information</div>
   }
 
-  let pages = businesses.map(element => {
+  const pages = businesses.map(element => {
     return (
       <li key={element.idBusinesses}>
         <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>

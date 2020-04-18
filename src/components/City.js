@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 
 export default function City() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [businesses, setBusinesses] = useState([])
 
   let {city} = useParams()

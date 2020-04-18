@@ -1,79 +1,45 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {Container, Row} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
+import {useEffect, useState} from 'react'
+import CityCard from './CityCard.js'
 
+export default function Cities() {
+  const [loading, setLoading] = useState(true)
+  const [cities, setCities] = useState([])
 
-export default class Cities extends React.Component {
-  state = {
-    loading: true,
-    cities: null,
+  useEffect(() => {
+    async function fetchData() {
+      const url = `http://${process.env.REACT_APP_API_URL}/city`
+      const response = await fetch(url)
+      let data = await response.json()
+      setCities(data)
+      setLoading(false)
+    }
+    fetchData()
+  }, [])
+
+  if (loading) {
+    return <div>loading...</div>
   }
 
-  async componentDidMount() {
-    const url = `http://${process.env.REACT_APP_API_URL}/city`
-    const response = await fetch(url)
-    let data = await response.json()
-    this.setState({cities: data, loading: false})
+  if (!cities) {
+    return <div>didn't get any Cities</div>
   }
 
-  render() {
-    if (this.state.loading) {
-      return <div>loading...</div>
-    }
+  const cityPages = cities.map((city, i) => {
+    return <CityCard key={i} city={city}></CityCard>
+  })
 
-    if (!this.state.cities) {
-      return <div>didn't get any Cities</div>
-    }
-
-    let Cities = this.state.cities.map(element => {
-      return (
-        <li key={element.City}>
-          <Link to={`/city/${element.City}`}>{element.City}</Link>
-        </li>
-      )
-    })
-
-    /*Trying to establish unique Cities only 
-        const distinct = (value, index, self) => {
-            return self.indexOf(value) === index;
-        }
-        const distinctCities = Cities.filter(distinct);
-
-        const uniqueCities = [...new this.setState(Cities)]
-        */
-
-    return (
-      <div>
-        <Container className="col-lg-8 col-md-10 col-sm-12 justify-content-md-center">
-          
+  return (
+    <div>
+      <Container className="justify-content-md-center text-center">
         <h1>Indiana Cities</h1>
-        <Row className="justify-content-md-center">
-
-              <div>
-                {this.state.cities.City && (
-                  <span className="card">
-                  <a href={this.state.cities.city}>
-                    
-                    <h3>{this.state.cities.City}</h3>
-                    <p className="text-center">12</p>
-                    <p>Local Businesses</p>
-
-                  </a>
-                  </span>
-                )}
-                </div>
-              
-
-
-          <div className="card">{Cities}
-            <div># of Businesses</div>
-            <div>Local Businesses</div>
-          </div>
-    </Row>
-    </Container>
-
-
-      </div>
-    )
-  }
+        <Row className="">
+          <Col>
+            <div>{cityPages}</div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  )
 }
