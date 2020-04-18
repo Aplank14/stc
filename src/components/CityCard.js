@@ -5,11 +5,11 @@ import {Card} from 'react-bootstrap'
 const CityCard = ({city}) => {
   return (
     <Link to={`/city/${city.City}`}>
-      <Card className="text-center">
+      <Card className="text-center col-lg-3 col-md-6 col-sm-6">
         <Card.Body>
           <div>{city.City}</div>
-          <div>12</div>
-          <div>Busses</div>
+          <h3>12</h3>
+          <div>Local Businesses</div>
         </Card.Body>
       </Card>
     </Link>
