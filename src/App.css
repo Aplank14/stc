@@ -115,11 +115,17 @@
 
 /*Header CSS */
 .headerBackground {
-  background-color:#888888
+  background-color:#333333
 }
 
 .headerTitle, .headerTitle:hover {
-  color: #E6E6E6;
+  color: #ffffff;
+}
+
+/*Found Online, does not do anything*/
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+  background-color: #3344ff;
+  color:#ffffff;
 }
 
 /*Footer CSS */
