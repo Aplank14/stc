@@ -31,8 +31,7 @@ export default function Businesses() {
 
   return (
     <div className="containerFull">
-      <br></br>
-      <h2 align="center">
+      <h2 align="center" className="titleMargin">
         {' '}
         <span>{business.BusName}</span> - <span>{business.City}</span>,{' '}
         <span>{business.State}</span>
@@ -41,7 +40,6 @@ export default function Businesses() {
       <Container className="col-lg-8 col-md-10 col-sm-12 justify-content-md-center">
         <Row className="justify-content-md-center">
           <div className="col-md-6 col-lg-6 mb-4">
-            <br></br>
             <div className="">
               Owner: <span>{business.Owner}</span>
             </div>

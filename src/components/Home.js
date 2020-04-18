@@ -16,7 +16,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <h1>Businesses</h1>
+      <h1 className="titleMargin">Businesses</h1>
       <div>
         Our Mission is to bring awareness to the businesses inside your community, what
         they serve, and when they are open with ease.

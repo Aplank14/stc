@@ -39,7 +39,7 @@ export default function City() {
 
   return (
     <div className="containerFull">
-      <h1 align="center">
+      <h1 align="center" className="titleMargin">
         <span>{city}</span>
       </h1>
       {CityResults}

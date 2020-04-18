@@ -36,7 +36,7 @@ export default function Businesses() {
 
   return (
     <div className="containerFull">
-      <h1 align="center">Businesses</h1>
+      <h1 align="center" className="titleMargin">Businesses</h1>
       <div>{pages}</div>
     </div>
   )

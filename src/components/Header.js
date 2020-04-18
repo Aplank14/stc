@@ -7,12 +7,12 @@ const Header = () => {
     <header>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand>
-          <Link to="/">Helping Out Our Local Business</Link>
+          <Link to="/" className="linkOrange">Helping Out Our Local Business</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link to="/">Home</Nav.Link>
+            <Nav.Link to="/" className="headerTitle">Home</Nav.Link>
             <Nav.Link to="/">About Us</Nav.Link>
             <NavDropdown title="Search" id="basic-nav-dropdown">
               <NavDropdown.Item href="/business">By Business</NavDropdown.Item>

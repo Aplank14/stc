@@ -93,10 +93,39 @@
 }
 
 
+.titleMargin {
+  margin: 35px;
+}
+.cityCardMargin {
+  margin: 50px;
+}
 
 
+/*Site Colors*/
+.colorOrange{
+  color: #FF6633;
+}
+.linkOrange{
+  color: #FF6633;
+}
+.linkOrange:hover{
+  color: #FF6633;
+}
 
 
+/*Header CSS */
+.headerBackground {
+  background-color:#888888
+}
+
+.headerTitle, .headerTitle:hover {
+  color: #E6E6E6;
+}
+
+/*Footer CSS */
+.footerBackground {
+  background-color:#333333
+}
 
 .footerTitle {
   color: #E6E6E6;
