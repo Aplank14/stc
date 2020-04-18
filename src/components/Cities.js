@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {Container, Row} from 'react-bootstrap'
+
 
 export default class Cities extends React.Component {
   state = {
@@ -42,8 +44,34 @@ export default class Cities extends React.Component {
 
     return (
       <div>
-        <h1>Cities</h1>
-        <div>{Cities}</div>
+        <Container className="col-lg-8 col-md-10 col-sm-12 justify-content-md-center">
+          
+        <h1>Indiana Cities</h1>
+        <Row className="justify-content-md-center">
+
+              <div>
+                {this.state.business.City && (
+                  <span className="card">
+                  <a href={this.state.businesses.city}>
+                    
+                    <h3>{this.state.business.City}</h3>
+                    <p className="text-center">12</p>
+                    <p>Local Businesses</p>
+
+                  </a>
+                  </span>
+                )}
+              </div>
+
+
+          <div className="card">{Cities}
+            <div># of Businesses</div>
+            <div>Local Businesses</div>
+          </div>
+    </Row>
+    </Container>
+
+
       </div>
     )
   }
