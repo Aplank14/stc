@@ -50,18 +50,19 @@ export default class Cities extends React.Component {
         <Row className="justify-content-md-center">
 
               <div>
-                {this.state.business.City && (
+                {this.state.cities.City && (
                   <span className="card">
-                  <a href={this.state.businesses.city}>
+                  <a href={this.state.cities.city}>
                     
-                    <h3>{this.state.business.City}</h3>
+                    <h3>{this.state.cities.City}</h3>
                     <p className="text-center">12</p>
                     <p>Local Businesses</p>
 
                   </a>
                   </span>
                 )}
-              </div>
+                </div>
+              
 
 
           <div className="card">{Cities}
