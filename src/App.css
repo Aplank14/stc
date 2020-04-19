@@ -112,6 +112,9 @@
   color: #FF6633;
 }
 
+a.dropdown-toggle {
+  color: white !important;
+}
 
 /*Header CSS */
 .headerBackground {

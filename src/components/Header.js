@@ -14,18 +14,10 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link to="/"><div className="headerTitle">Home</div></Nav.Link>
             <Nav.Link to="/"><div className="headerTitle">About Us</div></Nav.Link>
-            <span className="headerTitle">
-            <NavDropdown style={{ tintColor: 'white' }} title="Search" id="basic-nav-dropdown">
-              
+            <NavDropdown title="Search" style={{color: 'blue'}} id="basic-navbar-nav">
               <NavDropdown.Item href="/business">By Business</NavDropdown.Item>
               <NavDropdown.Item href="/city">By Location</NavDropdown.Item>
-
-              {/* Split Drop Down
-   <NavDropdown.Divider />
-   <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-   */}
             </NavDropdown>
-            </span>
           </Nav>
 
           {/* Search Box
