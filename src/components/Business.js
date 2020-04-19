@@ -68,13 +68,13 @@ export default function Businesses() {
               )}
             </div>
             <div>
-              <Link to={'/City/' + business.City}>Local Businesses</Link>
+              <Link to={'/City/' + business.City}>Nearby Local Businesses</Link>
             </div>
             <br></br>
           </div>
 
           <div className="col-md-6 col-lg-6 mb-4">
-            <div className="card">
+            
               <div className="align:left">
                 Monday: <span className="align:right">{business.Monday_Start}</span> -{' '}
                 <span>{business.Monday_Close}</span>
@@ -103,7 +103,11 @@ export default function Businesses() {
                 Sunday: <span>{business.Sunday_Start}</span> -{' '}
                 <span>{business.Sunday_Close}</span>
               </div>
-            </div>
+            
+          </div>
+
+          <div className="col-lg-12 mb-4">
+            <p>Main Paragraph Information</p>
           </div>
         </Row>
       </Container>

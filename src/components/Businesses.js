@@ -28,9 +28,9 @@ export default function Businesses() {
 
   const pages = businesses.map(element => {
     return (
-      <li key={element.idBusinesses}>
+      <div key={element.idBusinesses}>
         <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
-      </li>
+      </div>
     )
   })
 
