@@ -74,36 +74,34 @@ export default function Businesses() {
           </div>
 
           <div className="col-md-6 col-lg-6 mb-4">
-            
-              <div className="align:left">
-                Monday: <span className="align:right">{business.Monday_Start}</span> -{' '}
-                <span>{business.Monday_Close}</span>
-              </div>
-              <div className="align:left">
-                Tuesday: <span>{business.Tuesday_Start}</span> -{' '}
-                <span>{business.Tuesday_Close}</span>
-              </div>
-              <div className="align:left">
-                Wednesday: <span>{business.Wednesday_Start}</span> -{' '}
-                <span>{business.Wednesday_Close}</span>
-              </div>
-              <div className="align:left">
-                Thursday: <span>{business.Thursday_Start}</span> -{' '}
-                <span>{business.Thursday_Close}</span>
-              </div>
-              <div className="align:left">
-                Friday: <span>{business.Friday_Start}</span> -{' '}
-                <span>{business.Friday_Close}</span>
-              </div>
-              <div className="align:left">
-                Saturday: <span>{business.Saturday_Start}</span> -{' '}
-                <span>{business.Saturday_Close}</span>
-              </div>
-              <div className="align:left">
-                Sunday: <span>{business.Sunday_Start}</span> -{' '}
-                <span>{business.Sunday_Close}</span>
-              </div>
-            
+            <div className="align:left">
+              Monday: <span className="align:right">{business.Monday_Start}</span> -{' '}
+              <span>{business.Monday_Close}</span>
+            </div>
+            <div className="align:left">
+              Tuesday: <span>{business.Tuesday_Start}</span> -{' '}
+              <span>{business.Tuesday_Close}</span>
+            </div>
+            <div className="align:left">
+              Wednesday: <span>{business.Wednesday_Start}</span> -{' '}
+              <span>{business.Wednesday_Close}</span>
+            </div>
+            <div className="align:left">
+              Thursday: <span>{business.Thursday_Start}</span> -{' '}
+              <span>{business.Thursday_Close}</span>
+            </div>
+            <div className="align:left">
+              Friday: <span>{business.Friday_Start}</span> -{' '}
+              <span>{business.Friday_Close}</span>
+            </div>
+            <div className="align:left">
+              Saturday: <span>{business.Saturday_Start}</span> -{' '}
+              <span>{business.Saturday_Close}</span>
+            </div>
+            <div className="align:left">
+              Sunday: <span>{business.Sunday_Start}</span> -{' '}
+              <span>{business.Sunday_Close}</span>
+            </div>
           </div>
 
           <div className="col-lg-12 mb-4">

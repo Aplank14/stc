@@ -7,13 +7,19 @@ const Header = () => {
     <header>
       <Navbar className="headerBackground" expand="lg">
         <Navbar.Brand>
-          <Link to="/" className="linkOrange">Helping Out Our Local Business</Link>
+          <Link to="/" className="linkOrange">
+            Helping Out Our Local Business
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link to="/"><div className="headerTitle">Home</div></Nav.Link>
-            <Nav.Link to="/"><div className="headerTitle">About Us</div></Nav.Link>
+            <Nav.Link to="/">
+              <div className="headerTitle">Home</div>
+            </Nav.Link>
+            <Nav.Link to="/">
+              <div className="headerTitle">About Us</div>
+            </Nav.Link>
             <NavDropdown title="Search" style={{color: 'blue'}} id="basic-navbar-nav">
               <NavDropdown.Item href="/business">By Business</NavDropdown.Item>
               <NavDropdown.Item href="/city">By Location</NavDropdown.Item>

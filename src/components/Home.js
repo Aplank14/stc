@@ -1,18 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Video from './Video'
 
 export default function Home() {
   /* Video for Home Page Background */
-  const videoSource =
-    'https://grangerchurch.com/wp-content/uploads/2019/10/Web-Loop-Oct2019.mp4'
 
   return (
     <div>
       <div className="ContainerFull">
         <Link to="/Cities">
-          <video autoPlay="autoplay" loop="loop" muted className="Video">
-            <source src={videoSource} type="video/mp4" />
-          </video>
+          <Video />
         </Link>
       </div>
 

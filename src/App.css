@@ -14,8 +14,18 @@
 
 .Video {
   width: 100%;
-
   height: 100%;
+}
+
+.video-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: blur(20px);
+  transform: scale(1.1);
+  transition: opacity 0.2s ease-in-out;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -92,7 +102,6 @@
   border: #f1f1f1 1px solid;
 }
 
-
 .titleMargin {
   margin: 35px;
 }
@@ -100,16 +109,15 @@
   margin: 50px;
 }
 
-
 /*Site Colors*/
-.colorOrange{
-  color: #FF6633;
+.colorOrange {
+  color: #ff6633;
 }
-.linkOrange{
-  color: #FF6633;
+.linkOrange {
+  color: #ff6633;
 }
-.linkOrange:hover{
-  color: #FF6633;
+.linkOrange:hover {
+  color: #ff6633;
 }
 
 a.dropdown-toggle {
@@ -118,37 +126,39 @@ a.dropdown-toggle {
 
 /*Header CSS */
 .headerBackground {
-  background-color:#333333
+  background-color: #333333;
 }
 
-.headerTitle, .headerTitle:hover {
+.headerTitle,
+.headerTitle:hover {
   color: #ffffff;
 }
 
 /*Found Online, does not do anything*/
-.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+.navbar-default .navbar-nav .open .dropdown-menu {
   background-color: #3344ff;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /*Footer CSS */
 .footerBackground {
-  background-color:#333333
+  background-color: #333333;
 }
 
 .footerTitle {
-  color: #E6E6E6;
+  color: #e6e6e6;
   font-size: 24px;
 }
 .footerBody {
-  color: #FF6633;
+  color: #ff6633;
   font-size: 16px;
 }
 .footerCopyright {
-  color: #E6E6E6;
+  color: #e6e6e6;
   font-size: 14px;
 }
 
 .footerpadding {
-  padding: "30px",
+  padding: '30px';
 }
