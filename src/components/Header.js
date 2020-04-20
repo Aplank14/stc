@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <Navbar className="headerBackground" expand="lg">
         <Navbar.Brand>
-          <Link to="/" className="linkOrange">
+          <Link to="/" className="linkLightBlue">
             Title Here
           </Link>
         </Navbar.Brand>

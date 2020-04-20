@@ -120,8 +120,12 @@
   color: #ff6633;
 }
 
+.linkLightBlue, .linkLightBlue:hover {
+  color: #4DC9FF
+}
+
 a.dropdown-toggle {
-  color: white !important;
+  color: #4DC9FF !important;
 }
 
 /*Header CSS */
@@ -131,7 +135,7 @@ a.dropdown-toggle {
 
 .headerTitle,
 .headerTitle:hover {
-  color: #ffffff;
+  color: #4DC9FF;
 }
 
 /*Found Online, does not do anything*/
@@ -151,7 +155,7 @@ a.dropdown-toggle {
   font-size: 24px;
 }
 .footerBody {
-  color: #ff6633;
+  color: #4DC9FF;
   font-size: 16px;
 }
 .footerCopyright {
