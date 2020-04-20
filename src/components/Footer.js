@@ -38,7 +38,7 @@ const Footer = () => {
           <br></br>
           <br></br>
           <div align="center" className="footerCopyright">
-            © 2020 STC
+            © 2020 Title Here
           </div>
           <br></br>
         </Container>
