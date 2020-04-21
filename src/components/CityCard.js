@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Card} from 'react-bootstrap'
+import {Card, Col} from 'react-bootstrap'
 
 const CityCard = ({city}) => {
   return (
