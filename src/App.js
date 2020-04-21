@@ -22,8 +22,9 @@ function App() {
           <Route path="/city/:city" component={City} />
           <Route path="/business" component={Businesses} />
           <Route path="/city" component={Cities} />
-          <Route path="/" component={Home} />
           <Route path="/about" component={About} />
+          
+          <Route path="/" component={Home} />
         </Switch>
         <Footer></Footer>
       </Router>
