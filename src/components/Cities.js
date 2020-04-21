@@ -34,11 +34,7 @@ export default function Cities() {
     <div>
       <Container className="containerFull justify-content-md-center text-center">
         <h1 className="titleMargin">Indiana Cities</h1>
-        <Row className="">
-          <Col>
-            <div>{cityPages}</div>
-          </Col>
-        </Row>
+        <Row className="">{cityPages}</Row>
       </Container>
     </div>
   )
