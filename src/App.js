@@ -23,7 +23,7 @@ function App() {
           <Route path="/business" component={Businesses} />
           <Route path="/city" component={Cities} />
           <Route path="/" component={Home} />
-          <Route path="/About" component={About} />
+          <Route path="/about" component={About} />
         </Switch>
         <Footer></Footer>
       </Router>

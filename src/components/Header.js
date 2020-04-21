@@ -17,7 +17,7 @@ const Header = () => {
             <Nav.Link to="/">
               <div className="headerTitle">Placeholder</div>
             </Nav.Link>
-            <Nav.Link to="/about">
+            <Nav.Link href="/about">
               <div className="headerTitle">About Us</div>
             </Nav.Link>
             <NavDropdown title="Search" style={{color: 'blue'}} id="basic-navbar-nav">
