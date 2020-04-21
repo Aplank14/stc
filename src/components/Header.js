@@ -15,9 +15,9 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link to="/">
-              <div className="headerTitle">Home</div>
+              <div className="headerTitle">Placeholder</div>
             </Nav.Link>
-            <Nav.Link to="/">
+            <Nav.Link to="/about">
               <div className="headerTitle">About Us</div>
             </Nav.Link>
             <NavDropdown title="Search" style={{color: 'blue'}} id="basic-navbar-nav">

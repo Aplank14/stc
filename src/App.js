@@ -10,6 +10,7 @@ import Business from './components/Business'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
+import About from './components/About'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/business" component={Businesses} />
           <Route path="/city" component={Cities} />
           <Route path="/" component={Home} />
+          <Route path="/About" component={About} />
         </Switch>
         <Footer></Footer>
       </Router>
