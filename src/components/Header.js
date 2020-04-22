@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Navbar, NavDropdown, Nav} from 'react-bootstrap'
+import {Navbar, NavDropdown, Nav, Form, FormControl, Button} from 'react-bootstrap'
 
 const Header = () => {
   return (
     <header>
-      <Navbar className="headerBackground" expand="lg">
+      <Navbar className="headerBackground" variant="dark" expand="lg">
         <Navbar.Brand>
           <Link to="/" className="linkLightBlue">
             Title Here
@@ -20,10 +20,14 @@ const Header = () => {
             <Nav.Link href="/about">
               <div className="headerTitle">About Us</div>
             </Nav.Link>
-            <NavDropdown title="Search" style={{color: 'blue'}} id="basic-navbar-nav">
+            <NavDropdown title="Discover" variant="dark" id="basic-navbar-nav">
               <NavDropdown.Item href="/business">By Business</NavDropdown.Item>
               <NavDropdown.Item href="/city">By Location</NavDropdown.Item>
             </NavDropdown>
+            <Form inline>
+              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+              <Button variant="outline-light">Search</Button>
+            </Form>
           </Nav>
 
           {/* Search Box
