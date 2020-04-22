@@ -1,5 +1,6 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <Row>
             <Col xs={12} md={3}>
               <div className="footerTitle">Company</div>
-              <div className="footerBody">About</div>
+              <div className="footerBody"><Link to="/about">About</Link></div>
               <div className="footerBody">Blog</div>
               <div className="footerBody">Careers</div>
             </Col>
