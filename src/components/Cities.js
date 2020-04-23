@@ -36,6 +36,7 @@ export default function Cities() {
         <h1 className="titleMargin">Indiana Cities</h1>
         <Row className="">{cityPages}</Row>
       </Container>
+      <br></br>
     </div>
   )
 }

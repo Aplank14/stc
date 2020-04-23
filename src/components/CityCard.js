@@ -8,9 +8,9 @@ const CityCard = ({city}) => {
       <Link to={`/city/${city.City}`}>
         <Card className="text-center">
           <Card.Body>
-            <div>{city.City}</div>
-            <h3>12</h3>
-            <div>Local Businesses</div>
+            <div className="cityCardCity">{city.City}</div>
+            <h3 className="cityCardNumber">12</h3>
+            <div className="cityCardLocal">Local Businesses</div>
           </Card.Body>
         </Card>
       </Link>
