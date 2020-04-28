@@ -12,14 +12,16 @@ export default function Home() {
     <div>
       <Row className="">
         <Col lg={6} md={12}>
-          <Container className="containerFull justify-content-md-center text-center">
+          <Container style = {{height:"100vh"}} className="containerFull justify-content-md-center text-center">
           <img src={Shop_Small_Image} className="homepage-hero-image" />
           <img src={Support_Local} className="homepage-hero-text" />
           </Container>
         </Col>
 
         <Col lg={6} md={12}>
-          <div>Test 2</div>
+          <div>Test 2
+            <br></br><br></br><br></br><br></br>
+          </div>
         </Col>
       </Row>
 
