@@ -178,3 +178,11 @@ a.dropdown-toggle {
   width: 100%;
   object-fit: cover;
 }
+
+.homepage-hero-text {
+  max-width: 340px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+}

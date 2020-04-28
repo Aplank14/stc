@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Video from './Video'
 import {Container, Row, Col} from 'react-bootstrap'
 import Shop_Small_Image from '../Photo/Shop_Small.jpg'
+import Support_Local from '../Photo/Support_Local.png'
 
 export default function Home() {
   /* Video for Home Page Background */
@@ -13,6 +14,7 @@ export default function Home() {
         <Col lg={6} md={12}>
           <Container className="containerFull justify-content-md-center text-center">
           <img src={Shop_Small_Image} className="homepage-hero-image" />
+          <img src={Support_Local} className="homepage-hero-text" />
           </Container>
         </Col>
 
