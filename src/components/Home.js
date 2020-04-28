@@ -19,9 +19,11 @@ export default function Home() {
         </Col>
 
         <Col lg={6} md={12}>
-          <div className="align-middle">Test 2
+          <Container style = {{height:"calc(100vh - 65px)"}} className="containerFull justify-content-md-center">
+          <h3>Find Local Treasures <br />you'll love
             
-          </div>
+          </h3>
+          </Container>
         </Col>
       </Row>
 
