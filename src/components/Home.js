@@ -1,16 +1,31 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Video from './Video'
+import {Container, Row, Col} from 'react-bootstrap'
+import Shop_Small_Image from '../Photo/Shop_Small.jpg'
 
 export default function Home() {
   /* Video for Home Page Background */
 
   return (
     <div>
-      <div className="ContainerFull">
+      <Row className="">
+        <Col lg={6} md={12}>
+          {Shop_Small_Image}
+        </Col>
+
+        <Col lg={6} md={12}>
+          <div>Test 2</div>
+        </Col>
+      </Row>
+
+<div className="ContainerFull">
+        
         <Link to="/Cities">
           <Video />
         </Link>
+        
+        
       </div>
 
       <h1 align="center" className="titleMargin">
