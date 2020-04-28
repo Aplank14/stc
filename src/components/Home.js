@@ -11,7 +11,9 @@ export default function Home() {
     <div>
       <Row className="">
         <Col lg={6} md={12}>
-          {Shop_Small_Image}
+          <Container className="containerFull justify-content-md-center text-center">
+          <img src={Shop_Small_Image} className="homepage-hero-image" />
+          </Container>
         </Col>
 
         <Col lg={6} md={12}>
