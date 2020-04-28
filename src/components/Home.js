@@ -19,14 +19,6 @@ export default function Home() {
         </Col>
       </Row>
 
-<div className="ContainerFull">
-        
-        <Link to="/Cities">
-          <Video />
-        </Link>
-        
-        
-      </div>
 
       <h1 align="center" className="titleMargin">
         Our Mission
