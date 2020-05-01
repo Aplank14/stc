@@ -38,7 +38,7 @@ export default function Home() {
 {/* Need to add pagging */}
         <br /><br /><br />
 
-<Container style={{height:"90vw"}}>
+<Container>
   <Row>
     <Col lg={4} md={4} sm={10} className="text-center">
       <h3>Local Treasures</h3>
