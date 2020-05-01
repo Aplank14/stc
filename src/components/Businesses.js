@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
+import {Container, Row, Col, Media, ListGroup} from 'react-bootstrap'
 
 export default function Businesses() {
   const [loading, setLoading] = useState(true)
@@ -28,9 +29,25 @@ export default function Businesses() {
 
   const pages = businesses.map(element => {
     return (
-      <div key={element.idBusinesses}>
-        <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
-      </div>
+        <ListGroup.Item as="li" key={element.idBusinesses}>
+          <Container>
+            <Row>
+              <Col sm={8}>
+              <h4><Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link></h4>
+              <p>
+              {element.Type}<br />
+              {element.Address}<br />
+              {element.Phone}<br />
+              </p>
+              </Col>
+              <Col sm={4}>
+                Website
+                &emsp;
+                Address
+              </Col>
+            </Row>
+          </Container>
+        </ListGroup.Item>
     )
   })
 
@@ -39,7 +56,11 @@ export default function Businesses() {
       <h1 align="center" className="titleMargin">
         Businesses
       </h1>
-      <div>{pages}</div>
+      <Container className='py-2'>
+        <ListGroup as="ul">
+          {pages}
+        </ListGroup>
+      </Container>
     </div>
   )
 }
