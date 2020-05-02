@@ -9,6 +9,7 @@ export default function Nearby() {
 
   useEffect(() => {
     async function fetchData() {
+      // TODO: Switch endpoint to refrence /nearby
       const url = `http://${process.env.REACT_APP_API_URL}/nearby`
       const response = await fetch(url)
       let data = await response.json()
@@ -29,35 +30,27 @@ export default function Nearby() {
 
   const pages = Nearby.map(element => {
     return (
-        <ListGroup.Item as="li" key={element.idBusinesses}>
-          <Container>
-            <Row>
-              <Col sm={8}>
-              <h4><Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link></h4>
+      <ListGroup.Item as="li" key={element.idBusinesses}>
+        <Container>
+          <Row>
+            <Col sm={8}>
+              <h4>
+                <Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link>
+              </h4>
               <p>
-              {element.Type} - {element.Category && (
-                <span>
-                  {element.Category}
-                </span>
-              )}, {element.Subcategory && (
-                <span>
-                  {element.Subcategory}
-                </span>
-              )}
-              
-              <br />
-              {element.Address}<br />
-              {element.Phone}<br />
+                {element.Type} - {element.Category && <span>{element.Category}</span>},{' '}
+                {element.Subcategory && <span>{element.Subcategory}</span>}
+                <br />
+                {element.Address}
+                <br />
+                {element.Phone}
+                <br />
               </p>
-              </Col>
-              <Col sm={4}>
-                Website
-                &emsp;
-                Address
-              </Col>
-            </Row>
-          </Container>
-        </ListGroup.Item>
+            </Col>
+            <Col sm={4}>Website &emsp; Address</Col>
+          </Row>
+        </Container>
+      </ListGroup.Item>
     )
   })
 
@@ -66,10 +59,8 @@ export default function Nearby() {
       <h1 align="center" className="titleMargin">
         Nearby
       </h1>
-      <Container className='py-2'>
-        <ListGroup as="ul">
-          {pages}
-        </ListGroup>
+      <Container className="py-2">
+        <ListGroup as="ul">{pages}</ListGroup>
       </Container>
     </div>
   )

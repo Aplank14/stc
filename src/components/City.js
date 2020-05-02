@@ -3,8 +3,7 @@ import {useParams} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import {Container, Row, Col, Media} from 'react-bootstrap'
 import BusinessCard from './BusinessCard'
-import Photo from './../Photo/download.svg'
-import Restaurant from './../Photo/restaurant.png'
+import GemItem from './GemItem'
 
 export default function City() {
   const [loading, setLoading] = useState(true)
@@ -36,64 +35,8 @@ export default function City() {
     return <div>didn't get any City Information</div>
   }
 
-  console.log(gems)
-
-  const gemCard = gems.map((element, i) => {
-    console.log(element)
-    return (
-      <Col sm={12} key={element.idBusinesses}>
-        <Media>
-
-{/* NEED TO ALIGN VERTICAL CENTER */}
-          <span className="mr-3 verticalcenter">
-            <img
-            width={92}
-            height={92}
-            src={Restaurant}
-            alt="Generic placeholder"
-          />
-          </span>
-
-          <Media.Body className="text-left">
-            <Container className="py-2">
-              <Row>
-                <Col lg={7} md={7} sm={12}>
-                  <h5>{element.BusName} &emsp; 4.5 ★ &emsp;</h5>
-                  <p>
-                    {element.Type}   
-                        {element.Category && (
-                          <span>
-                            &nbsp;- {element.Category}
-                          </span>
-                        )}
-
-                        {element.Subcategory && (
-                          <span>
-                            , {element.Subcategory}
-                          </span>
-                        )}
-                    
-                    
-                    <br></br>
-                    {element.Business_Description} Insert Business Description Here
-                  </p>
-                </Col>
-                
-                <Col lg={5} md={5} sm={12}>
-                  
-                     Address: {element.Address} 
-                    <Row>
-                      <Col><h5>25 Years</h5></Col>
-                      <Col><h5>#{i + 1} Local option</h5></Col>
-                    </Row>
-                  
-                </Col>
-              </Row>
-            </Container>
-          </Media.Body>
-        </Media>
-      </Col>
-    )
+  const gemItem = gems.map((element, i) => {
+    return <GemItem key={i} i={i+1} business={element}></GemItem>
   })
 
   const businessCards = businesses.map((element, i) => {
@@ -108,15 +51,11 @@ export default function City() {
       <Container className="container justify-content-md-center text-center">
         <h2>Local Gems</h2>
 
-        <Row>
-          {gemCard}
-        </Row>
+        <Row>{gemItem}</Row>
 
         <h2>Businesses</h2>
 
-        <Row className="">
-          {businessCards}
-        </Row>
+        <Row className="">{businessCards}</Row>
       </Container>
     </div>
   )
