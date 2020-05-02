@@ -8,7 +8,7 @@ const Header = () => {
       <Navbar className="headerBackground" variant="dark" expand="lg">
         <Navbar.Brand>
           <Link to="/" className="linkLightBlue">
-            Local Options
+            Local Option
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

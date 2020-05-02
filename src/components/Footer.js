@@ -41,7 +41,7 @@ const Footer = () => {
           <br></br>
           <br></br>
           <div align="center" className="footerCopyright">
-            © 2020 Local Options
+            © 2020 Local Option
           </div>
           <br></br>
         </Container>

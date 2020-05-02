@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import {Container, Row, Col, Media, ListGroup} from 'react-bootstrap'
+import {Container, Row, Col, ListGroup} from 'react-bootstrap'
 
 export default function Nearby() {
   const [loading, setLoading] = useState(true)

@@ -1,7 +1,7 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import {Container, Row, Col, Media} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 import BusinessCard from './BusinessCard'
 import GemItem from './GemItem'
 
@@ -36,7 +36,7 @@ export default function City() {
   }
 
   const gemItem = gems.map((element, i) => {
-    return <GemItem key={i} i={i+1} business={element}></GemItem>
+    return <GemItem key={i} i={i + 1} business={element}></GemItem>
   })
 
   const businessCards = businesses.map((element, i) => {

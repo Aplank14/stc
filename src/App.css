@@ -125,6 +125,11 @@
   color: #4dc9ff;
 }
 
+.linkBlack,
+.linkBlack:hover {
+  color: #000000;
+}
+
 a.dropdown-toggle {
   color: #4dc9ff !important;
 }

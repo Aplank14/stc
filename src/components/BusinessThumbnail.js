@@ -1,17 +1,25 @@
 import Restaurant from './../Photo/restaurant.png'
 import Diamond from './../Photo/Diamond.png'
-import Photo from './../Photo/download.svg'
+import Service from './../Photo/ServiceIcon.png'
 
 let busType = {
   Restaurant: Restaurant,
-  Service: Photo,
+  Service: Service,
 }
 
-export default function BusinessThumbnail(type, premium, name) {
+/*
+    Comment Start - Doesn't work
+
+    
     if (premium) {
         console.log(name)
         return Diamond
     } else {
         return busType[type] ? busType[type] : Diamond
     }
+Comment End
+*/
+
+export default function BusinessThumbnail(type, premium, name) {
+  return busType[type] ? busType[type] : Diamond
 }
