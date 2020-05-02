@@ -5,7 +5,7 @@ import BusinessThumbnail from './BusinessThumbnail'
 
 const BusinessCard = ({business}) => {
   return (
-    <Col lg={3} md={4} sm={6}>
+    <Col lg={3} md={4} xs={6}>
       <Link to={`/business/${business.idBusinesses}`} className="linkBlack">
         <Card>
           <Card.Img
