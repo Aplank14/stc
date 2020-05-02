@@ -5,7 +5,7 @@ import {Container, Row, Col, Media, ListGroup} from 'react-bootstrap'
 
 export default function Nearby() {
   const [loading, setLoading] = useState(true)
-  const [Nearby, setNearby] = useState([])
+  const [nearby, setNearby] = useState([])
 
   useEffect(() => {
     async function fetchData() {
@@ -23,7 +23,7 @@ export default function Nearby() {
     return <div>loading...</div>
   }
 
-  if (!Nearby) {
+  if (!nearby) {
     return <div>didn't get any City Information</div>
   }
 
