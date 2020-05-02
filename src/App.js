@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Cities from './components/Cities'
 import City from './components/City'
-import Businesses from './components/Businesses'
+import Nearby from './components/Nearby'
 import Business from './components/Business'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -20,7 +20,7 @@ function App() {
         <Switch>
           <Route path="/business/:id" component={Business} />
           <Route path="/city/:city" component={City} />
-          <Route path="/business" component={Businesses} />
+          <Route path="/nearby" component={Nearby} />
           <Route path="/city" component={Cities} />
           <Route path="/about" component={About} />
           <Route path="/" component={Home} />

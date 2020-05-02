@@ -194,3 +194,9 @@ a.dropdown-toggle {
     display: none;
   }
 }
+
+
+
+.verticalcenter {
+  vertical-align: middle;
+}

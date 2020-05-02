@@ -42,31 +42,50 @@ export default function City() {
     return (
       <Col sm={12} key={element.idBusinesses}>
         <Media>
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
+
+{/* NEED TO ALIGN VERTICAL CENTER */}
+          <span className="mr-3 verticalcenter">
+            <img
+            width={92}
+            height={92}
             src={Photo}
             alt="Generic placeholder"
           />
+          </span>
+
           <Media.Body className="text-left">
-            <Container>
+            <Container className="py-2">
               <Row>
-                <Col sm={7}>
-                  <h5>{element.BusName} &emsp; Rating: 4.5 &emsp;</h5>
+                <Col lg={7} md={7} sm={12}>
+                  <h5>{element.BusName} &emsp; 4.5 ★ &emsp;</h5>
                   <p>
-                    {element.Type} <br></br>
-                    {element.Business_Description} lorem ipsum dolor
+                    {element.Type}   
+                        {element.Category && (
+                          <span>
+                            &nbsp;- {element.Category}
+                          </span>
+                        )}
+
+                        {element.Subcategory && (
+                          <span>
+                            , {element.Subcategory}
+                          </span>
+                        )}
+                    
+                    
+                    <br></br>
+                    {element.Business_Description} Bus Desc Here
                   </p>
                 </Col>
-                <Col sm={5}>
-                  <Container>
-                    Address: {element.Address} <br></br>
-                    <Row className="py-2">
-                      <Col>25 Years</Col>
-                      <Col>#{i + 1} Local option</Col>
+                
+                <Col lg={5} md={5} sm={12}>
+                  
+                     Address: {element.Address} <br></br>
+                    <Row>
+                      <Col><h5>25 Years</h5></Col>
+                      <Col><h5>#{i + 1} Local option</h5></Col>
                     </Row>
-                  </Container>
+                  
                 </Col>
               </Row>
             </Container>

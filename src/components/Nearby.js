@@ -3,16 +3,16 @@ import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import {Container, Row, Col, Media, ListGroup} from 'react-bootstrap'
 
-export default function Businesses() {
+export default function Nearby() {
   const [loading, setLoading] = useState(true)
-  const [businesses, setBusinesses] = useState([])
+  const [Nearby, setNearby] = useState([])
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://${process.env.REACT_APP_API_URL}/business`
+      const url = `http://${process.env.REACT_APP_API_URL}/nearby`
       const response = await fetch(url)
       let data = await response.json()
-      setBusinesses(data)
+      setNearby(data)
       setLoading(false)
     }
 
@@ -23,11 +23,11 @@ export default function Businesses() {
     return <div>loading...</div>
   }
 
-  if (!businesses) {
+  if (!Nearby) {
     return <div>didn't get any City Information</div>
   }
 
-  const pages = businesses.map(element => {
+  const pages = Nearby.map(element => {
     return (
         <ListGroup.Item as="li" key={element.idBusinesses}>
           <Container>
@@ -35,7 +35,17 @@ export default function Businesses() {
               <Col sm={8}>
               <h4><Link to={`/business/${element.idBusinesses}`}>{element.BusName}</Link></h4>
               <p>
-              {element.Type}<br />
+              {element.Type} - {element.Category && (
+                <span>
+                  {element.Category}
+                </span>
+              )}, {element.Subcategory && (
+                <span>
+                  {element.Subcategory}
+                </span>
+              )}
+              
+              <br />
               {element.Address}<br />
               {element.Phone}<br />
               </p>
@@ -54,7 +64,7 @@ export default function Businesses() {
   return (
     <div className="containerFull">
       <h1 align="center" className="titleMargin">
-        Businesses
+        Nearby
       </h1>
       <Container className='py-2'>
         <ListGroup as="ul">

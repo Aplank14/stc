@@ -15,12 +15,12 @@ const Footer = () => {
                 <Link to="/about">About</Link>
               </div>
               <div className="footerBody">Blog</div>
-              <div className="footerBody">Careers</div>
+              <div className="footerBody">Get Involved</div>
             </Col>
 
             <Col xs={12} md={3}>
-              <div className="footerTitle">Company</div>
-              <div className="footerBody">Test New Features</div>
+              <div className="footerTitle">Local Options</div>
+              <div className="footerBody">Beta Test</div>
               <div className="footerBody">Help Document</div>
               <div className="footerBody">Tools</div>
             </Col>
@@ -41,7 +41,7 @@ const Footer = () => {
           <br></br>
           <br></br>
           <div align="center" className="footerCopyright">
-            © 2020 Title Here
+            © 2020 Local Options
           </div>
           <br></br>
         </Container>
