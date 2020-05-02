@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 import {Container, Row, Col, Media} from 'react-bootstrap'
 import BusinessCard from './BusinessCard'
 import Photo from './../Photo/download.svg'
+import Restaurant from './../Photo/restaurant.png'
 
 export default function City() {
   const [loading, setLoading] = useState(true)
@@ -48,7 +49,7 @@ export default function City() {
             <img
             width={92}
             height={92}
-            src={Photo}
+            src={Restaurant}
             alt="Generic placeholder"
           />
           </span>
@@ -74,13 +75,13 @@ export default function City() {
                     
                     
                     <br></br>
-                    {element.Business_Description} Bus Desc Here
+                    {element.Business_Description} Insert Business Description Here
                   </p>
                 </Col>
                 
                 <Col lg={5} md={5} sm={12}>
                   
-                     Address: {element.Address} <br></br>
+                     Address: {element.Address} 
                     <Row>
                       <Col><h5>25 Years</h5></Col>
                       <Col><h5>#{i + 1} Local option</h5></Col>
@@ -105,10 +106,17 @@ export default function City() {
         <span>{city}</span>
       </h1>
       <Container className="container justify-content-md-center text-center">
-        <h3>Local Gems</h3>
-        <Row>{gemCard}</Row>
-        <h3>Businesses</h3>
-        <Row className="">{businessCards}</Row>
+        <h2>Local Gems</h2>
+
+        <Row>
+          {gemCard}
+        </Row>
+
+        <h2>Businesses</h2>
+
+        <Row className="">
+          {businessCards}
+        </Row>
       </Container>
     </div>
   )
