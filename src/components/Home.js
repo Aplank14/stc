@@ -86,28 +86,34 @@ export default function Home() {
       </Container>
       <br />
 
-<div className="bgGrey">
-    <Container className="py-2">
-      <Row>
-      <Col lg={4} sm={12} className="my-auto">
-      <h1 align="center" className="titleMargin">
-        About Local Option
-      </h1>
-      </Col>
+      <div className="bgGrey">
+        <Container className="py-2">
+          <Row>
+            <Col lg={4} sm={12} className="my-auto">
+              <h1 align="center" className="titleMargin">
+                About Local Option
+              </h1>
+            </Col>
 
-      <Col lg={8} sm={12} className="my-auto">
-      <div>
-        <b>Mission:</b> Bring awareness to the businesses inside every community, what they offer, and when
-        they are open with ease.
+            <Col lg={8} sm={12} className="my-auto">
+              <div>
+                <b>Mission:</b> Bring awareness to the businesses inside every community,
+                what they offer, and when they are open with ease.
+              </div>
+              <br></br>
+              <div>
+                Local Option informs you of all the options inside every community. We
+                gather the businesses' important information to help you make the best
+                choice. Search by city, type of business, rating, or even if they are open
+                now. And did I mention - the reviews are all from local supporters like
+                you! Your opinion matters and will help others find the local gems of each
+                city. Together we can help the local businesses that have offer the best
+                product, give back the most, and have been supporting us.
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
-      <br></br>
-      <div>Local Option informs you of all the options inside every community. We gather the businesses' important information to help you make the best choice. Search by city, type of business, rating, or even if they are open now. And did I mention - the reviews are all from local supporters like you! Your opinion matters and will help others find the local gems of each city. Together we can help the local businesses that have offer the best product, give back the most, and have been supporting us.</div>
-      </Col>
-      </Row>
-      </Container>  
     </div>
-
-    </div>
-
   )
 }

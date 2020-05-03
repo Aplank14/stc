@@ -6,19 +6,62 @@ import {Container, Row, Col, ListGroup} from 'react-bootstrap'
 export default function Nearby() {
   const [loading, setLoading] = useState(true)
   const [nearby, setNearby] = useState([])
+  const [coordinates, setCoordinates] = useState([{}])
 
   useEffect(() => {
+    const getPosition = options => {
+      return new Promise(function(resolve, reject) {
+        navigator.geolocation.getCurrentPosition(resolve, reject, options)
+      })
+    }
+
+    const sortByDist = (businesses, position) => {
+      businesses = businesses.map(element => {
+        element.dist = calculateDistance(
+          position.latitude,
+          position.longitude,
+          element.latitude,
+          element.longitude
+        )
+        return element
+      })
+      businesses.sort((a, b) => a.dist - b.dist)
+      console.log(businesses)
+      return businesses
+    }
+
     async function fetchData() {
       // TODO: Switch endpoint to refrence /nearby
-      const url = `http://${process.env.REACT_APP_API_URL}/nearby`
+      const url = `http://${process.env.REACT_APP_API_URL}/business`
       const response = await fetch(url)
+      let position = await getPosition()
+      setCoordinates({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      })
       let data = await response.json()
+      data = sortByDist(data, position.coords)
       setNearby(data)
       setLoading(false)
     }
-
     fetchData()
   }, [])
+
+  useEffect(() => {}, [coordinates])
+
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    var radlat1 = (Math.PI * lat1) / 180
+    var radlat2 = (Math.PI * lat2) / 180
+    var theta = lon1 - lon2
+    var radtheta = (Math.PI * theta) / 180
+    var dist =
+      Math.sin(radlat1) * Math.sin(radlat2) +
+      Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta)
+    dist = Math.acos(dist)
+    dist = (dist * 180) / Math.PI
+    dist = dist * 60 * 1.1515
+    return dist
+  }
 
   if (loading) {
     return <div>loading...</div>
@@ -28,7 +71,7 @@ export default function Nearby() {
     return <div>didn't get any City Information</div>
   }
 
-  const pages = Nearby.map(element => {
+  const pages = nearby.map(element => {
     return (
       <ListGroup.Item as="li" key={element.idBusinesses}>
         <Container>
