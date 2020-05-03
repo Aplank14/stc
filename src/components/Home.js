@@ -27,8 +27,8 @@ export default function Home() {
           </Container>
         </Col>
 
-        <Col lg={6} md={12}>
-          <Container className="aligncenter">
+        <Col lg={6} md={12} className="my-auto">
+          <Container>
             <h2>Support each other with your Local Option</h2>
             <br />
             <Form inline>
