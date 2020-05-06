@@ -51,7 +51,7 @@ export default function Businesses() {
               <span>{business.Zipcode}</span>
             </div>
             <div className="">
-              Phone: <span>{business.Owner}</span>
+              Phone: <span>{business.Phone}</span>
             </div>
             <div>
               {business.Facebook && (

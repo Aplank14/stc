@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="footerBody">
                 <Link to="/about">About</Link>
               </div>
-              <div className="footerBody">Blog</div>
+              
               <div className="footerBody">Get Involved</div>
             </Col>
 

@@ -34,7 +34,12 @@ export default function Home() {
             <Form inline>
               <FormControl
                 type="text"
-                placeholder="City, State or Zipcode"
+                placeholder="Search"
+                className="mr-sm-2"
+              />
+              <FormControl
+                type="text"
+                placeholder="City, State"
                 className="mr-sm-2"
               />
               <Button variant="outline-dark">Search</Button>{' '}
@@ -114,6 +119,29 @@ export default function Home() {
           </Row>
         </Container>
       </div>
+
+      <div className="">
+        <Container className="py-2">
+          <Row>
+
+          <Col lg={8} sm={12} className="my-auto">
+              <div>
+                <b>Mission:</b> Own a Local Business? Add it <a href="#">Here</a>
+              </div>
+              
+            </Col>
+            <Col lg={4} sm={12} className="my-auto">
+              <h1 align="center" className="titleMargin">
+                Add Local Business HERE
+              </h1>
+            </Col>
+
+            
+          </Row>
+        </Container>
+      </div>
+
+
     </div>
   )
 }
