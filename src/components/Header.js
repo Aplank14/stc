@@ -17,6 +17,9 @@ const Header = () => {
             <Nav.Link href="/about">
               <div className="headerTitle">About Us</div>
             </Nav.Link>
+            <Nav.Link href="/map">
+              <div className="headerTitle">USA Map</div>
+            </Nav.Link>
             <NavDropdown title="Discover" variant="dark" id="basic-navbar-nav">
               <NavDropdown.Item href="/nearby">Nearby</NavDropdown.Item>
               <NavDropdown.Item href="/city">By State</NavDropdown.Item>

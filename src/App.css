@@ -10,6 +10,14 @@
   margin-bottom: 0px;
 }
 
+path {
+  pointer-events: all;
+}
+path:hover {
+  opacity: 0.50;
+  cursor: pointer;
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 
 .Video {

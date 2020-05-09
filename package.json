@@ -10,9 +10,11 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^5.6.3",
     "react-player": "^1.15.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-usa-map": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

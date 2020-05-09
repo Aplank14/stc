@@ -1,6 +1,8 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import {Form, FormControl, Button} from 'react-bootstrap'
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import Shop_Small_Image from '../Photo/Shop_Small.jpg'
 import Support_Local from '../Photo/Support_Local_White.png'
 import Diamond from './../Photo/Diamond.png'
@@ -9,6 +11,17 @@ import Community_Support from './../Photo/Community_Support_Color.png'
 
 export default function Home() {
   /* Video for Home Page Background */
+  const { register, handleSubmit, errors } = useForm();
+  const history = useHistory();
+
+  const onSubmit = data => {
+    if(data.business !== ''){
+      history.push(`/business/${data.business}`)
+    } else if (data.location !== ''){
+      history.push(`/city/${data.location}`)
+    } 
+    console.log(errors)
+  }
 
   return (
     <div>
@@ -31,18 +44,22 @@ export default function Home() {
           <Container>
             <h2>Support each other with your Local Option</h2>
             <br />
-            <Form inline>
+            <Form inline onSubmit={handleSubmit(onSubmit)}>
               <FormControl
                 type="text"
                 placeholder="Search"
                 className="mr-sm-2"
+                name="business"
+                ref={register({required: false, maxLength: 100})}
               />
               <FormControl
                 type="text"
                 placeholder="City, State"
                 className="mr-sm-2"
+                name="location"
+                ref={register({required: false, maxLength: 100})}
               />
-              <Button variant="outline-dark">Search</Button>{' '}
+              <Button type="submit" variant="outline-dark">Search</Button>{' '}
               <Button variant="outline-primary"> Near Me</Button>
             </Form>
           </Container>

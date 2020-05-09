@@ -11,6 +11,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import About from './components/About'
+import StateMap from './components/Map'
+import State from './components/State'
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Switch>
           <Route path="/business/:id" component={Business} />
           <Route path="/city/:city" component={City} />
+          <Route path="/state/:id" component={State} />
           <Route path="/nearby" component={Nearby} />
+          <Route path="/map" component={StateMap}/>
           <Route path="/city" component={Cities} />
           <Route path="/about" component={About} />
           <Route path="/" component={Home} />
