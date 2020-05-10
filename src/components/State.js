@@ -9,6 +9,7 @@ export default function State() {
   const [cities, setCities] = useState([])
 
 
+
   let {id} = useParams()
   id = parseInt(id)
 
@@ -38,7 +39,7 @@ export default function State() {
   return (
     <div>
       <Container className="containerFull justify-content-md-center text-center">
-        <h1 className="titleMargin">Indiana Cities</h1>
+        <h1 className="titleMargin">{cities.State} Cities</h1>
         <Row className="">{cityPages}</Row>
       </Container>
       <br></br>

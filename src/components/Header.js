@@ -22,7 +22,7 @@ const Header = () => {
             </Nav.Link>
             <NavDropdown title="Discover" variant="dark" id="basic-navbar-nav">
               <NavDropdown.Item href="/nearby">Nearby</NavDropdown.Item>
-              <NavDropdown.Item href="/city">By State</NavDropdown.Item>
+              <NavDropdown.Item href="/map">By State</NavDropdown.Item>
             </NavDropdown>
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
