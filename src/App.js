@@ -13,6 +13,7 @@ import Home from './components/Home'
 import About from './components/About'
 import StateMap from './components/Map'
 import State from './components/State'
+import NewBusiness from './components/NewBusiness'
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
           <Route path="/city/:city" component={City} />
           <Route path="/state/:id" component={State} />
           <Route path="/nearby" component={Nearby} />
-          <Route path="/map" component={StateMap}/>
+          <Route path="/map" component={StateMap} />
           <Route path="/city" component={Cities} />
           <Route path="/about" component={About} />
+          <Route path="/newBusiness" component={NewBusiness} />
           <Route path="/" component={Home} />
         </Switch>
         <Footer></Footer>

@@ -35,10 +35,7 @@ export default function GemItem({business}, {i}) {
 
                 <Col lg={5} md={5} sm={12}>
                   Address: {business.Address} <br />
-                  {business.Phone && (
-                    <span>Phone: {business.Phone}
-                    </span>
-              )}
+                  {business.Phone && <span>Phone: {business.Phone}</span>}
                   <Row>
                     <Col>
                       <h5>25 Years</h5>

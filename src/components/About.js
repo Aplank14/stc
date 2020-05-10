@@ -1,25 +1,34 @@
 import React from 'react'
+import {Container, Row} from 'react-bootstrap'
 
 export default function About() {
   return (
     <div>
-      <div className="ContainerFull">
-        <h1 align="center" className="titleMargin">
-          About Us
-        </h1>
-        <div>
-          Founded in 2020 during the Covid 19 crisis, we believe that all businesses
-          matter. As the bailouts happened, our small businesses were left behind. We did
-          not see the stimulus fit for them or its employees. We believe in providing them
-          free exposure so that they can grow their business and continue their legacies.
+      <Container className="container justify-content-md-center">
+        <div className="ContainerFull">
+          <h1 align="center" className="titleMargin">
+            About Us
+          </h1>
+          <div>
+            Local Option was founded during the Covid 19 crisis of 2020. We believe that
+            all businesses are essential. As government bailouts occurred, many small
+            businesses were forced to fight to stay in businesses and unfortunately some
+            were not able to weather the storm. Although the Covid crisis raised awareness
+            of the importance of shopping local, we wanted to make sure that the need to
+            shop local is never forgotten. We wanted to put a system in place to provide
+            free exposure to locally owned and operated businesses so that they can grow
+            and continue their legacies.
+          </div>
+          <br></br>
+          <div>
+            There are roughly 30 million small businesses in the U.S. and our team is
+            committed to adding all small businesses to our website and expanding our
+            borders. If you are aware of a small business that has not yet been added to
+            our site, please feel free to email us at alskdj@test.com. Every business is
+            important and we want to make sure they are featured here.
+          </div>
         </div>
-        <br></br>
-        <div>
-          Our team is committed to adding all small businesses to our website and are
-          constantly expanding our borders. Please feel free to email us at
-          alskdj@test.com and let us know about a new one and we would love to add it!
-        </div>
-      </div>
+      </Container>
     </div>
   )
 }

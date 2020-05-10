@@ -14,13 +14,15 @@ const Footer = () => {
               <div className="footerBody">
                 <Link to="/about">About</Link>
               </div>
-              
+
               <div className="footerBody">Get Involved</div>
             </Col>
 
             <Col xs={12} md={3}>
               <div className="footerTitle">Local Options</div>
-              <div className="footerBody">Beta Test</div>
+              <div className="footerBody">
+                <Link to="/newBusiness">Submit a Business</Link>
+              </div>
               <div className="footerBody">Help Document</div>
               <div className="footerBody">Tools</div>
             </Col>

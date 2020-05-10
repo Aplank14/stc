@@ -8,8 +8,6 @@ export default function State() {
   const [loading, setLoading] = useState(true)
   const [cities, setCities] = useState([])
 
-
-
   let {id} = useParams()
   id = parseInt(id)
 
