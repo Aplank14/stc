@@ -39,7 +39,6 @@ export default function StateMap() {
           Connecticut
         </Col>
         <Col lg={7} md={7} xs={12}>
-          {' '}
           Delaware
         </Col>
         <Col lg={7} md={7} xs={12}>
@@ -64,11 +63,9 @@ export default function StateMap() {
           Iowa
         </Col>
         <Col lg={7} md={7} xs={12}>
-          {' '}
           Kansas
         </Col>
         <Col lg={7} md={7} xs={12}>
-          {' '}
           Kentucky
         </Col>
         <Col lg={7} md={7} xs={12}>
@@ -78,7 +75,7 @@ export default function StateMap() {
           Maine
         </Col>
         <Col lg={7} md={7} xs={12}>
-          {' '}
+         
           Maryland
         </Col>
         <Col lg={7} md={7} xs={12}>
