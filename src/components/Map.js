@@ -11,7 +11,15 @@ export default function StateMap() {
   }
 
   return (
+
+    
     <Container className="mw-100 justify-content-md-center text-center">
+
+      <span className="containerFull">
+      <h1 align="center" className="titleMargin">
+        <span>Map</span>
+      </h1>
+      </span>
       <div className="App">
         <USAMap onClick={mapHandler} />
       </div>

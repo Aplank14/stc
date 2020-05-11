@@ -158,7 +158,7 @@ export default function NewBusiness() {
 
               <FormControl
                 type="text"
-                placeholder="Email"
+                placeholder="Business Email"
                 className="mr-sm-2"
                 name="Email"
                 ref={register({required: false, maxLength: 100})}
