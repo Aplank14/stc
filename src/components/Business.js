@@ -134,6 +134,7 @@ export default function Businesses() {
           width: "100%",
           height: "100%"
         }}
+        title="Youtube Video of Business"
         src={business.Premium_Youtube}
         frameBorder="0"
       />
