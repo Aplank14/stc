@@ -8,8 +8,8 @@ export default function State() {
   const [loading, setLoading] = useState(true)
   const [cities, setCities] = useState([])
 
-  let {id} = useParams()
-  id = parseInt(id)
+  let {State} = useParams()
+ 
 
   useEffect(() => {
     async function fetchData() {
@@ -20,7 +20,7 @@ export default function State() {
       setLoading(false)
     }
     fetchData()
-  }, [id])
+  }, [State])
 
   if (loading) {
     return <div>loading...</div>
