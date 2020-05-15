@@ -147,6 +147,18 @@ a.dropdown-toggle {
   background-color: #333333;
 }
 
+
+/*Test Header Lightmode CSS  TEST ONLY*/
+.headerBackground2 {
+  background-color: #eeeeee;
+}
+
+.headerTitle2,
+.headerTitle2:hover {
+  color: #083a50;
+}
+/*End Test*/
+
 .headerTitle,
 .headerTitle:hover {
   color: #4dc9ff;

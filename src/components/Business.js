@@ -105,7 +105,7 @@ export default function Businesses() {
           </div>
 
           <div className="col-lg-12 mb-4">
-            <p>Main Paragraph Information</p>
+            <p>{business.Business_Description}</p>
           </div>
         </Row>
 
@@ -113,6 +113,7 @@ export default function Businesses() {
         <br />
 
         <div>
+
               {business.Premium_Youtube && (
                 <div>Example Premium Video <br />
               
