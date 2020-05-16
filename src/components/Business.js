@@ -113,37 +113,35 @@ export default function Businesses() {
         <br />
 
         <div>
-              {business.Premium_Youtube && (
-                <div>Example Premium Video <br />
-              
+          {business.Premium_Youtube && (
+            <div>
+              Example Premium Video <br />
               <br />
               <div
-      className="video"
-      style={{
-        position: "relative",
-        paddingBottom: "56.25%" /* 16:9 */,
-        paddingTop: 25,
-        height: 0
-      }}
-    >
-      <iframe
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%"
-        }}
-        title="Youtube Video of Business"
-        src={business.Premium_Youtube}
-        frameBorder="0"
-      />
-    </div>
-                </div>)}
+                className="video"
+                style={{
+                  position: 'relative',
+                  paddingBottom: '56.25%' /* 16:9 */,
+                  paddingTop: 25,
+                  height: 0,
+                }}
+              >
+                <iframe
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  title="Youtube Video of Business"
+                  src={business.Premium_Youtube}
+                  frameBorder="0"
+                />
+              </div>
+            </div>
+          )}
         </div>
-        
-
-
       </Container>
     </div>
   )

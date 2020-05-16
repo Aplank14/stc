@@ -3,7 +3,16 @@ import {Link} from 'react-router-dom'
 import {Container, Row, Col, Media} from 'react-bootstrap'
 import BusinessThumbnail from './BusinessThumbnail'
 
-export default function GemItem({business}, {i}) {
+export default function GemItem({business, i}) {
+  let d = new Date()
+  let year = d.getFullYear()
+  let years = business.Start_Year ? year - business.Start_Year + ' Years' : false
+  let desc = business.Business_Description
+  if (desc.length > 140) {
+    let split = business.Business_Description.slice(0, 140).lastIndexOf(' ')
+    desc = business.Business_Description.slice(0, split) + '...'
+  }
+
   console.log(business)
   return (
     <Col sm={12} key={business.idBusinesses}>
@@ -29,7 +38,7 @@ export default function GemItem({business}, {i}) {
                     {business.Category && <span>&nbsp;- {business.Category}</span>}
                     {business.Subcategory && <span>, {business.Subcategory}</span>}
                     <br></br>
-                    {business.Business_Description} Insert Business Description Here
+                    {desc}
                   </p>
                 </Col>
 
@@ -38,7 +47,7 @@ export default function GemItem({business}, {i}) {
                   {business.Phone && <span>Phone: {business.Phone}</span>}
                   <Row>
                     <Col>
-                      <h5>25 Years</h5>
+                      <h5>{years}</h5>
                     </Col>
                     <Col>
                       <h5>#{i} Local option</h5>

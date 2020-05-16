@@ -9,7 +9,6 @@ export default function State() {
   const [cities, setCities] = useState([])
 
   let {State} = useParams()
- 
 
   useEffect(() => {
     async function fetchData() {

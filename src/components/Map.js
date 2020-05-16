@@ -11,14 +11,11 @@ export default function StateMap() {
   }
 
   return (
-
-    
     <Container className="mw-100 justify-content-md-center text-center">
-
       <span className="containerFull">
-      <h1 align="center" className="titleMargin">
-        <span>Map</span>
-      </h1>
+        <h1 align="center" className="titleMargin">
+          <span>Map</span>
+        </h1>
       </span>
       <div className="App">
         <USAMap onClick={mapHandler} />
@@ -83,7 +80,6 @@ export default function StateMap() {
           Maine
         </Col>
         <Col lg={7} md={7} xs={12}>
-         
           Maryland
         </Col>
         <Col lg={7} md={7} xs={12}>
@@ -203,8 +199,6 @@ export default function StateMap() {
           Wyoming
         </Col>
       </Row>
-
-      
     </Container>
   )
 }
