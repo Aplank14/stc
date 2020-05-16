@@ -113,7 +113,7 @@ export default function Businesses() {
         <br />
 
         <div>
-          {business.Premium_Youtube && (
+          {business.Premium !== 0 && business.Premium_Youtube && (
             <div>
               Example Premium Video <br />
               <br />

@@ -12,9 +12,10 @@ export default function State() {
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://${process.env.REACT_APP_API_URL}/city`
+      const url = `http://${process.env.REACT_APP_API_URL}/cityCount`
       const response = await fetch(url)
       let data = await response.json()
+      console.log(data)
       setCities(data)
       setLoading(false)
     }

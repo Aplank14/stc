@@ -9,9 +9,9 @@ const BusinessCard = ({business}) => {
       <Link to={`/business/${business.idBusinesses}`} className="linkBlack">
         <Card className="card-no-underline h-100">
           <Card.Header>
-            <Image 
-              src={BusinessThumbnail(business.Type, business.Premium, business.BusName)} 
-              rounded 
+            <Image
+              src={BusinessThumbnail(business.Type, business.Premium, business.BusName)}
+              rounded
               width={92}
               height={92}
             />

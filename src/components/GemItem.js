@@ -45,7 +45,9 @@ export default function GemItem({business, i}) {
                 </Col>
 
                 <Col lg={5} md={5} sm={12} className="text-right">
-                  <h5>#{i} {years}</h5>
+                  <h5>
+                    #{i} {years}
+                  </h5>
                   Address: {business.Address} <br />
                   {business.Phone && <span>Phone: {business.Phone}</span>}
                   {/* <Row className="text-center">

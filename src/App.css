@@ -147,7 +147,6 @@ a.dropdown-toggle {
   background-color: #333333;
 }
 
-
 /*Test Header Lightmode CSS  TEST ONLY*/
 .headerBackground2 {
   background-color: #eeeeee;
@@ -228,9 +227,6 @@ a.dropdown-toggle {
   background-color: #eeeeeead;
 }
 
-
-
 .card-no-underline a:hover {
   text-decoration: none;
-
 }
