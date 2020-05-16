@@ -32,7 +32,7 @@ export default function Nearby() {
 
     async function fetchData() {
       // TODO: Switch endpoint to refrence /nearby
-      const url = `http://${process.env.REACT_APP_API_URL}/business`
+      const url = `${process.env.REACT_APP_API_URL}/business`
       const response = await fetch(url)
       let position = await getPosition()
       setCoordinates({

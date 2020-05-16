@@ -12,10 +12,10 @@ export default function State() {
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://${process.env.REACT_APP_API_URL}/cityCount`
+      const url = `${process.env.REACT_APP_API_URL}/cityCount`
       const response = await fetch(url)
       let data = await response.json()
-      console.log(data)
+      data.sort((a,b) =>  b.Count - a.Count)
       setCities(data)
       setLoading(false)
     }

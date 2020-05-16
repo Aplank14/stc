@@ -9,7 +9,7 @@ export default function Cities() {
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://${process.env.REACT_APP_API_URL}/city`
+      const url = `${process.env.REACT_APP_API_URL}/city`
       const response = await fetch(url)
       let data = await response.json()
       setCities(data)
