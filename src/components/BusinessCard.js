@@ -10,6 +10,9 @@ const BusinessCard = ({business}) => {
         <Card>
           <Card.Img
             variant="top"
+            width={92}
+            height={92}
+            className="align-self-center"
             alt={business.type}
             src={BusinessThumbnail(business.Type, business.Premium, business.BusName)}
           />
