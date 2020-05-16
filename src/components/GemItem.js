@@ -8,7 +8,7 @@ export default function GemItem({business, i}) {
   let year = d.getFullYear()
   let years = business.Start_Year ? year - business.Start_Year + ' Years' : false
   let desc = business.Business_Description
-  if (desc.length > 140) {
+  if (desc && desc.length > 140) {
     let split = business.Business_Description.slice(0, 140).lastIndexOf(' ')
     desc = business.Business_Description.slice(0, split) + '...'
   }
