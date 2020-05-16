@@ -9,7 +9,6 @@ export default function GemItem({business, i}) {
   let years = false
   if (business.Start_Year) {
     years = year - business.Start_Year + ' Years'
-    years = ' - ' + years
   }
   let desc = business.Business_Description
   if (desc && desc.length > 140) {
@@ -34,7 +33,7 @@ export default function GemItem({business, i}) {
             <Container className="py-2">
               <Row>
                 <Col lg={8} md={8} sm={12}>
-                  <h5>{business.BusName} &emsp; </h5>
+                  <h5>#{i} - {business.BusName}</h5>
                 </Col>
 
                 <Col lg={2} md={2} xs={4}>
@@ -43,20 +42,20 @@ export default function GemItem({business, i}) {
                   
                 <Col lg={2} md={2} xs={8}>
                   <span>
-                    #{i} &nbsp; {years}
+                    {years}
                   </span>
                 </Col>
                   
 
                 
                   <Col lg={7} md={7} sm={12}>
-                  <p>
+                  <span>
                     {business.Type}
                     {business.Category && <span>&nbsp;- {business.Category}</span>}
                     {business.Subcategory && <span>, {business.Subcategory}</span>}
-                    <br></br>
-                    <span className="d-none d-sm-block">{desc}</span>
-                  </p>
+                    
+                    <span className="d-none d-md-block">{desc}</span>
+                  </span>
                 </Col>
                 <Col lg={5} md={5} sm={12} className="">
                   Address: {business.Address} <br />
