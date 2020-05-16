@@ -227,3 +227,10 @@ a.dropdown-toggle {
 .bgGrey {
   background-color: #eeeeeead;
 }
+
+
+
+.card-no-underline a:hover {
+  text-decoration: none;
+
+}
