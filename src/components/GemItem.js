@@ -60,16 +60,7 @@ export default function GemItem({business, i}) {
                 <Col lg={5} md={5} sm={12} className="">
                   Address: {business.Address} <br />
                   {business.Phone && <span>Phone: {business.Phone}</span>}
-                  {/* <Row className="text-center">
-                    {years &&
-                      <Col>
-                        <h5>{years}</h5>
-                      </Col>
-                    }
-                      <Col>
-                        <h5>#{i}</h5>
-                      </Col>
-                  </Row> */}
+                  
                 </Col>
               </Row>
             </Container>
