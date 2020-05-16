@@ -17,11 +17,10 @@ const BusinessCard = ({business}) => {
             />
           </Card.Header>
           <Card.Body>
-            <Card.Title>
-              <h5>{business.BusName}</h5>
-            </Card.Title>
+            
             <Card.Body className="p-0 p-md-2">
-              {business.Rating}
+              <h5>{business.BusName}</h5>
+              {business.Rating}4.5 ★ <br/>
               {business.Type}
               {business.Category && <span>&nbsp;- {business.Category}</span>}
 
