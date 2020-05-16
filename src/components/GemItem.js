@@ -19,15 +19,13 @@ export default function GemItem({business, i}) {
       <Link to={`/business/${business.idBusinesses}`} className="linkBlack">
         <Media>
           {/* NEED TO ALIGN VERTICAL CENTER */}
-          <span className="mr-3 verticalcenter">
-            <img
-              width={92}
-              height={92}
-              src={BusinessThumbnail(business.Type, business.Premium, business.BusName)}
-              alt="Generic placeholder"
-            />
-          </span>
-
+          <img
+            width={92}
+            height={92}
+            className="align-self-center"
+            src={BusinessThumbnail(business.Type, business.Premium, business.BusName)}
+            alt="Generic placeholder"
+          />
           <Media.Body className="text-left">
             <Container className="py-2">
               <Row>
