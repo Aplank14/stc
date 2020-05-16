@@ -8,19 +8,22 @@ export default function State() {
   const [loading, setLoading] = useState(true)
   const [cities, setCities] = useState([])
 
-  let {State} = useParams()
+  let {id} = useParams()
 
   useEffect(() => {
     async function fetchData() {
-      const url = `${process.env.REACT_APP_API_URL}/cityCount`
+      const url = `${process.env.REACT_APP_API_URL}/state/${id}`
       const response = await fetch(url)
+      if (response.status!==200) {
+        return
+      }
       let data = await response.json()
       data.sort((a,b) =>  b.Count - a.Count)
       setCities(data)
       setLoading(false)
     }
     fetchData()
-  }, [State])
+  }, [id])
 
   if (loading) {
     return <div>loading...</div>
