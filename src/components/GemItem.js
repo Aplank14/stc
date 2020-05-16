@@ -6,7 +6,11 @@ import BusinessThumbnail from './BusinessThumbnail'
 export default function GemItem({business, i}) {
   let d = new Date()
   let year = d.getFullYear()
-  let years = business.Start_Year ? year - business.Start_Year + ' Years' : false
+  let years = false
+  if (business.Start_Year) {
+    years = year - business.Start_Year + ' Years'
+    years = ' - ' + years
+  }
   let desc = business.Business_Description
   if (desc && desc.length > 140) {
     let split = business.Business_Description.slice(0, 140).lastIndexOf(' ')
@@ -40,17 +44,20 @@ export default function GemItem({business, i}) {
                   </p>
                 </Col>
 
-                <Col lg={5} md={5} sm={12}>
+                <Col lg={5} md={5} sm={12} className="text-right">
+                  <h5>#{i} {years}</h5>
                   Address: {business.Address} <br />
                   {business.Phone && <span>Phone: {business.Phone}</span>}
-                  <Row>
-                    <Col>
-                      <h5>{years}</h5>
-                    </Col>
-                    <Col>
-                      <h5>#{i} Local option</h5>
-                    </Col>
-                  </Row>
+                  {/* <Row className="text-center">
+                    {years &&
+                      <Col>
+                        <h5>{years}</h5>
+                      </Col>
+                    }
+                      <Col>
+                        <h5>#{i}</h5>
+                      </Col>
+                  </Row> */}
                 </Col>
               </Row>
             </Container>

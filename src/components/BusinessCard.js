@@ -1,26 +1,26 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Card, Col} from 'react-bootstrap'
+import {Card, Col, Image} from 'react-bootstrap'
 import BusinessThumbnail from './BusinessThumbnail'
 
 const BusinessCard = ({business}) => {
   return (
-    <Col lg={3} md={4} xs={6}>
+    <Col lg={3} md={4} xs={6} className="p-0 p-md-1 flex-grow-1">
       <Link to={`/business/${business.idBusinesses}`} className="linkBlack">
-        <Card>
-          <Card.Img
-            variant="top"
-            width={92}
-            height={92}
-            className="align-self-center"
-            alt={business.type}
-            src={BusinessThumbnail(business.Type, business.Premium, business.BusName)}
-          />
+        <Card className="card-no-underline h-100">
+          <Card.Header>
+            <Image 
+              src={BusinessThumbnail(business.Type, business.Premium, business.BusName)} 
+              rounded 
+              width={92}
+              height={92}
+            />
+          </Card.Header>
           <Card.Body>
             <Card.Title>
               <h5>{business.BusName}</h5>
             </Card.Title>
-            <Card.Body>
+            <Card.Body className="p-0 p-md-2">
               {business.Rating}
               {business.Type}
               {business.Category && <span>&nbsp;- {business.Category}</span>}
