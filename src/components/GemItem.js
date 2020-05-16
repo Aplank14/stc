@@ -38,7 +38,7 @@ export default function GemItem({business, i}) {
                     {business.Category && <span>&nbsp;- {business.Category}</span>}
                     {business.Subcategory && <span>, {business.Subcategory}</span>}
                     <br></br>
-                    {desc}
+                    <span className="desktop-only">{desc}</span>
                   </p>
                 </Col>
 
