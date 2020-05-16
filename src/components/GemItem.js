@@ -36,11 +36,11 @@ export default function GemItem({business, i}) {
                   <h5>#{i} - {business.BusName}</h5>
                 </Col>
 
-                <Col lg={2} md={2} xs={4}>
+                <Col lg={2} md={2} xs={5}>
                   <span>4.5 ★</span>
                 </Col>
                   
-                <Col lg={2} md={2} xs={8}>
+                <Col lg={2} md={2} xs={7}>
                   <span>
                     {years}
                   </span>
