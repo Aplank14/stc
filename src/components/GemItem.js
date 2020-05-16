@@ -33,8 +33,23 @@ export default function GemItem({business, i}) {
           <Media.Body className="text-left">
             <Container className="py-2">
               <Row>
-                <Col lg={7} md={7} sm={12}>
-                  <h5>{business.BusName} &emsp; 4.5 ★ &emsp;</h5>
+                <Col lg={8} md={8} sm={12}>
+                  <h5>{business.BusName} &emsp; </h5>
+                </Col>
+
+                <Col lg={2} md={2} xs={4}>
+                  <span>4.5 ★</span>
+                </Col>
+                  
+                <Col lg={2} md={2} xs={8}>
+                  <span>
+                    #{i} &nbsp; {years}
+                  </span>
+                </Col>
+                  
+
+                
+                  <Col lg={7} md={7} sm={12}>
                   <p>
                     {business.Type}
                     {business.Category && <span>&nbsp;- {business.Category}</span>}
@@ -43,11 +58,7 @@ export default function GemItem({business, i}) {
                     <span className="d-none d-sm-block">{desc}</span>
                   </p>
                 </Col>
-
-                <Col lg={5} md={5} sm={12} className="text-right">
-                  <h5>
-                    #{i} {years}
-                  </h5>
+                <Col lg={5} md={5} sm={12} className="">
                   Address: {business.Address} <br />
                   {business.Phone && <span>Phone: {business.Phone}</span>}
                   {/* <Row className="text-center">
