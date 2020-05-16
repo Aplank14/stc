@@ -14,13 +14,14 @@ export default function StateMap() {
   let stateLinks = []
   for (const abbrev in states) {
     stateLinks.push(
-      <Col xs={12} md={6} key={abbrev}>
-        <Link to={abbrev}>
-          {states[abbrev]}
+      <div key={abbrev}>
+        <Link to={'/state/'+ abbrev}>
+            {states[abbrev]}
         </Link>
-      </Col>
+      </div>
     )
   }
+  const lastStates = stateLinks.splice(25, 25)
 
   return (
     <Container className="mw-100 justify-content-md-center text-center">
@@ -35,7 +36,12 @@ export default function StateMap() {
       </div>
       <Container className="mw-60">
       <Row>
-        {stateLinks}
+        <Col xs={12} md={6}>
+          {stateLinks}      
+        </Col>
+        <Col cs={12} md={6}>
+          {lastStates}      
+        </Col>
       </Row>
       </Container>
     </Container>
