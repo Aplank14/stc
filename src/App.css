@@ -227,6 +227,6 @@ a.dropdown-toggle {
   background-color: #eeeeeead;
 }
 
-.card-no-underline a:hover {
-  text-decoration: none;
+.no-underline a:hover {
+  text-decoration: none !important;
 }

@@ -18,7 +18,7 @@ export default function GemItem({business, i}) {
 
   console.log(business)
   return (
-    <Col sm={12} key={business.idBusinesses}>
+    <Col sm={12} key={business.idBusinesses} className="no-underline">
       <Link to={`/business/${business.idBusinesses}`} className="linkBlack">
         <Media>
           {/* NEED TO ALIGN VERTICAL CENTER */}
@@ -40,7 +40,7 @@ export default function GemItem({business, i}) {
                   <span>4.5 ★</span>
                 </Col>
                   
-                <Col lg={2} md={2} xs={7}>
+                <Col lg={2} md={2} xs={7} className="pr-0 pr-md-1">
                   <span>
                     {years}
                   </span>
@@ -48,7 +48,7 @@ export default function GemItem({business, i}) {
                   
 
                 
-                  <Col lg={7} md={7} sm={12}>
+                  <Col lg={7} md={7} sm={12} className="pr-0 pr-md-1">
                   <span>
                     {business.Type}
                     {business.Category && <span>&nbsp;- {business.Category}</span>}
@@ -57,7 +57,7 @@ export default function GemItem({business, i}) {
                     <span className="d-none d-md-block">{desc}</span>
                   </span>
                 </Col>
-                <Col lg={5} md={5} sm={12} className="">
+                <Col lg={5} md={5} sm={12} className="pr-0 pr-md-1">
                   Address: {business.Address} <br />
                   {business.Phone && <span>Phone: {business.Phone}</span>}
                   

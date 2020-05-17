@@ -6,8 +6,8 @@ import BusinessThumbnail from './BusinessThumbnail'
 const BusinessCard = ({business}) => {
   return (
     <Col lg={3} md={4} xs={6} className="p-0 p-md-1 flex-grow-1">
-      <Link to={`/business/${business.idBusinesses}`} className="linkBlack">
-        <Card className="card-no-underline h-100">
+      <Link to={`/business/${business.idBusinesses}`} className="linkBlack " style={{ textDecoration: 'none' }}>
+        <Card className="h-100">
           <Card.Header>
             <Image
               src={BusinessThumbnail(business.Type, business.Premium, business.BusName)}
