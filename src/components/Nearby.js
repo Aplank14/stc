@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import {Container, Row, Col, ListGroup} from 'react-bootstrap'
 import { Clock } from 'react-bootstrap-icons';
-import Tooltip from '@material-ui/core/Tooltip';
 import isOpen from './../utils/isOpen'
 
 export default function Nearby() {
