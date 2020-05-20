@@ -25,32 +25,37 @@ let convertFromStr = (time) => {
 export default function isOpen(business){
     let d = new Date()
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-    let weekday = daysOfWeek[d.getDay()]
-    let startTime = business[weekday+'_Start']
-    let closeTime = business[weekday+'_Close']
-    console.log(startTime)
-    console.log(closeTime)
-    if(startTime === 'Closed' || startTime === null){
-      console.log('Closed')
-      return false
+    let day = d.getDay()
+    let weekday = daysOfWeek[day]
+    const startTime = business[weekday+'_Start']
+    const closeTime = business[weekday+'_Close']
+    if(startTime === 'Closed' || startTime === null || startTime === ''){
+      return {'open': false, 'start': startTime, 'close': closeTime}
     }
 
     let start = convertFromStr(startTime)
     let close = convertFromStr(closeTime)
-    console.log(start)
-    console.log(close)
 
     let currMin = d.getMinutes()
     let currHour = d.getHours()
 
+
     if(start.hour < currHour && currHour < close.hour) {
-      console.log('Open')
-      return true
+      return {'open': true, 'start': startTime, 'close': closeTime}
     }
-    if(start.hour > close.hour && (currHour < close.hour || currHour > start.hour)){
-      console.log('Open')
-      return true 
+    if(start.hour > close.hour && currHour > start.hour){
+      return {'open': true, 'start': startTime, 'close': closeTime}
     }
-    console.log('Closed')
-    return false
+    if(day===0) {
+      weekday = 8
+    }
+    weekday = daysOfWeek[day-1]
+    const yesStartTime = business[weekday+'_Start']
+    const yesCloseTime = business[weekday+'_Close']
+    start = convertFromStr(yesStartTime)
+    close = convertFromStr(yesCloseTime)
+    if(start.hour > close.hour && currHour < close.hour){
+      return {'open': true, 'start': yesStartTime, 'close': yesCloseTime}
+    }
+    return {'open': false, 'start': startTime, 'close': closeTime}
 }
