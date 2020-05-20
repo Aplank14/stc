@@ -4,6 +4,7 @@ import {Card, Col, Image} from 'react-bootstrap'
 import BusinessThumbnail from './BusinessThumbnail'
 
 const BusinessCard = ({business}) => {
+
   return (
     <Col lg={3} md={4} xs={6} className="p-0 p-md-1 flex-grow-1">
       <Link to={`/business/${business.idBusinesses}`} className="linkBlack " style={{ textDecoration: 'none' }}>

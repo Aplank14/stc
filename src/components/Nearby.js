@@ -2,6 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import {Container, Row, Col, ListGroup} from 'react-bootstrap'
+import { Clock } from 'react-bootstrap-icons';
+import Tooltip from '@material-ui/core/Tooltip';
+import isOpen from './../utils/isOpen'
 
 export default function Nearby() {
   const [loading, setLoading] = useState(true)
@@ -72,6 +75,17 @@ export default function Nearby() {
   }
 
   const pages = nearby.map(element => {
+    let d = new Date()
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    let weekday = daysOfWeek[d.getDay()]
+    let startTime = element[weekday+'_Start']
+    let closeTime = element[weekday+'_Close']
+    if(startTime === 'Closed' || startTime === null){
+      closeTime = ''
+    }
+
+    const open = isOpen(element)
+    console.log(open)
     return (
       <ListGroup.Item as="li" key={element.idBusinesses}>
         <Container>
@@ -90,7 +104,8 @@ export default function Nearby() {
                 <br />
               </p>
             </Col>
-            <Col sm={4}>Website &emsp; Address</Col>
+            <Col sm={4}>Website &emsp; Address <br/> {startTime} - {closeTime} {open && <Clock />}
+            </Col>
           </Row>
         </Container>
       </ListGroup.Item>

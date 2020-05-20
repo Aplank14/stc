@@ -9,6 +9,7 @@
     "bootstrap": "^4.4.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
+    "react-bootstrap-icons": "^1.0.2-alpha3",
     "react-dom": "^16.13.1",
     "react-hook-form": "^5.6.3",
     "react-player": "^1.15.3",
