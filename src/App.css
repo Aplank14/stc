@@ -118,9 +118,14 @@ path:hover {
 }
 
 /*Site Colors*/
-.colorOrange {
-  color: #ff6633;
+.colorBlue {
+  color: #0077EE;
 }
+
+.colorBlue2 {
+  color: #3333AA;
+}
+
 .linkOrange {
   color: #ff6633;
 }
@@ -130,7 +135,7 @@ path:hover {
 
 .linkLightBlue,
 .linkLightBlue:hover {
-  color: #4dc9ff;
+  color: #0077EE;
 }
 
 .linkBlack,
@@ -139,52 +144,52 @@ path:hover {
 }
 
 a.dropdown-toggle {
-  color: #4dc9ff !important;
+  color: #0077EE !important;
 }
 
 /*Header CSS */
 .headerBackground {
-  background-color: #333333;
+  background-color: #FBFBFB;
 }
 
 /*Test Header Lightmode CSS  TEST ONLY*/
 .headerBackground2 {
-  background-color: #eeeeee;
+  background-color: #FFFFFF;
 }
 
 .headerTitle2,
 .headerTitle2:hover {
-  color: #083a50;
+  color: #0077EE;
 }
 /*End Test*/
 
 .headerTitle,
 .headerTitle:hover {
-  color: #4dc9ff;
+  color: #0077EE;
 }
 
 /*Found Online, does not do anything*/
 .navbar-default .navbar-nav .open .dropdown-menu > li > a,
 .navbar-default .navbar-nav .open .dropdown-menu {
   background-color: #3344ff;
-  color: #ffffff;
+  color: #FBFBFB;
 }
 
 /*Footer CSS */
 .footerBackground {
-  background-color: #333333;
+  background-color: #FBFBFB;
 }
 
 .footerTitle {
-  color: #e6e6e6;
+  color: #111111;
   font-size: 24px;
 }
 .footerBody {
-  color: #4dc9ff;
+  color: #0077EE;
   font-size: 16px;
 }
 .footerCopyright {
-  color: #e6e6e6;
+  color: #767676;
   font-size: 14px;
 }
 

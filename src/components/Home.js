@@ -7,9 +7,10 @@ import {Link} from 'react-router-dom'
 
 import Shop_Small_Image from '../Photo/Shop_Small.jpg'
 import Support_Local from '../Photo/Support_Local_White.png'
-import Diamond from './../Photo/Diamond.png'
+import Diamond from './../Photo/Diamond White Black.png'
+import Gems from './../Photo/Gems.png'
 import Cash_Cycle from './../Photo/Cash_Cycle.png'
-import Community_Support from './../Photo/Community_Support_Color.png'
+import Community_Support from './../Photo/Community Support v2.png'
 
 export default function Home() {
   /* Video for Home Page Background */
@@ -78,7 +79,7 @@ export default function Home() {
       <Container>
         <Row>
           <Col lg={4} md={4} sm={10} className="text-center py-2">
-            <img src={Diamond} width={120} height={120} alt="Generic placeholder"></img>
+            <img src={Gems} width={120} height={120} alt="Generic placeholder"></img>
             <h3>Local Gems</h3>
             Looking for the best Local Options in each community? The locals know best!
             Find the hidden gems in each category.

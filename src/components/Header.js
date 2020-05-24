@@ -5,7 +5,7 @@ import {Navbar, NavDropdown, Nav, Form, FormControl, Button} from 'react-bootstr
 const Header = () => {
   return (
     <header>
-      <Navbar className="headerBackground" variant="dark" expand="lg">
+      <Navbar className="headerBackground container-fluid" variant="dark" expand="lg">
         <Navbar.Brand>
           <Link to="/" className="linkLightBlue">
             Local Option
@@ -24,10 +24,14 @@ const Header = () => {
               <NavDropdown.Item href="/nearby">Nearby</NavDropdown.Item>
               <NavDropdown.Item href="/map">By State</NavDropdown.Item>
             </NavDropdown>
-            <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-light">Search</Button>
+            
+
+            {/* Need to Align Right */}
+            <Form inline className="">
+              <FormControl type="text" placeholder="Search" className="mr-sm-2 ml-auto" />
+              <Button variant="outline-primary">Search</Button>
             </Form>
+            
           </Nav>
 
           {/* Search Box
